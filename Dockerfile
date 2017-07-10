@@ -115,6 +115,8 @@ RUN echo y | android update sdk --no-ui --all --filter extra-google-google_play_
 # Copy install tools
 COPY tools /opt/tools
 
+RUN chmod -R 777 /opt/tools
+
 #Copy accepted android licenses
 COPY licenses ${ANDROID_SDK_HOME}/licenses
 
